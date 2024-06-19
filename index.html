@@ -6,79 +6,70 @@
     <title>Design Information</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
         }
 
         h1 {
-            margin-top: 20px;
+            color: #333;
+            margin-bottom: 20px;
         }
 
         table {
-            margin: 20px auto;
             border-collapse: collapse;
+            width: 50%;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
         }
 
         th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
+            padding: 10px;
             text-align: left;
         }
 
         th {
             background-color: #f2f2f2;
         }
-
-        #clock {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 20px;
-        }
     </style>
 </head>
 <body>
+
     <h1>Design Information</h1>
 
     <table>
         <tr>
-            <th>Designer</th>
-            <td>Salina</td>
+            <th>Attribute</th>
+            <th>Details</th>
         </tr>
         <tr>
-            <th>Print Method</th>
-            <td>Screen Printing</td>
+            <td>Fabric color</td>
+            <td>Navy blue</td>
         </tr>
         <tr>
-            <th>Printing Material</th>
-            <td>Reactive Dye</td>
+            <td>Dye used</td>
+            <td>Reactive dye</td>
+        </tr>
+        <tr>
+            <td>Print method</td>
+            <td>Screen printing</td>
+        </tr>
+        <tr>
+            <td>Dye name</td>
+            <td>Navy ECR</td>
+        </tr>
+        <tr>
+            <td>Design Motif</td>
+            <td>Nature</td>
         </tr>
     </table>
 
-    <div id="clock"></div>
-
-    <script>
-        function updateClock() {
-            var now = new Date();
-            var hours = now.getHours();
-            var minutes = now.getMinutes();
-            var seconds = now.getSeconds();
-
-            hours = hours % 12;
-            hours = hours ? hours : 12; // Handle midnight
-
-            minutes = minutes < 10 ? '0' + minutes : minutes;
-            seconds = seconds < 10 ? '0' + seconds : seconds;
-
-            var timeString = hours + ':' + minutes + ':' + seconds;
-
-            document.getElementById('clock').textContent = timeString;
-
-            setTimeout(updateClock, 1000); // Update every second
-        }
-
-        updateClock(); // Initial call to display clock
-    </script>
 </body>
 </html>
